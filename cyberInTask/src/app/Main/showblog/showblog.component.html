@@ -1,0 +1,29 @@
+<div class="table-responsive">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Sr.No</th>
+      <th>Title</th>
+      <th>Sub Title</th>
+      <th>Tags</th>
+      <th>Content</th>
+
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let getblog of getshowblog; index as i">
+      <td>{{i+1}}</td>
+      <td><a class="blue" (click)="editButtonClick(getblog)">{{getblog.title}}</a></td>
+      <td>{{getblog.sub_title}}</td>
+      <td>{{getblog.tags}}</td>
+      <td>{{getblog.content}}</td>
+      <td>
+        <button type="submit" class="btn btn-info" (click)="deleteApi(getblog.id,i)">Delete</button>
+      </td>
+
+    </tr>
+  </tbody>
+  </table>
+  </div>

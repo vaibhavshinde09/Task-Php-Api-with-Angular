@@ -1,0 +1,65 @@
+<!-- Card -->
+<div class="col-md-12">
+  <div class="col-md-12">
+    <form class="text-center border border-light p-5" action="#!" [formGroup]="filterRecord">
+
+      <p class="h4 ">Filter Blog</p>
+
+      <!-- Email -->
+      <div class="row">
+        <div class="col-md-3">
+            <!-- First name -->
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="By Title" formControlName="title">
+        </div>
+        <div class="col-md-3">
+          <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="By sub_Title" formControlName="sub_title">
+        </div>
+        <div class="col-md-3">
+          <!-- Last name -->
+          <input type="text" id="defaultRegisterFormLastName" class="form-control" formControlName="content" placeholder="By Content">
+      </div>
+      <div class="col-md-3">
+        <!-- Last name -->
+        <input type="text" id="defaultRegisterFormLastName" formControlName="tags" class="form-control" placeholder="By Tag">
+    </div>
+
+<div class="col-md-2"style="padding-top: 15px;">
+
+    <button class="btn btn-info btn-block"   type="submit" (click)="filter()">Filter</button>
+</div>
+
+    </div>
+    </form>
+  </div>
+<div *ngFor="let getblog of filterRecordBlog; index as i">
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>{{getblog.title}}</h2>
+        <h5>{{getblog.sub_title}}</h5>
+        <p>{{getblog.content}}</p>
+        <p>Tag by{{getblog.tags}}</p>
+
+      </div>
+      </div>
+  </div>
+  <!-- Content -->
+  <!-- <div>
+    <div class="col-md-12">
+      <div class="row">
+      <h5 class="pink-text"><i class="fas fa-chart-pie"></i>{{getblog.title}}</h5>
+      <h3 class="card-title pt-2"><strong>{{getblog.sub_title}}</strong></h3>
+      <p>{{getblog.content}}.</p>
+      <a class="btn btn-pink"><i class="fas fa-clone left"></i>{{getblog.tags}}</a>
+    </div>
+    </div>
+  </div>
+  </div>
+</div> -->
+
+
+
+
+<!-- Card -->
